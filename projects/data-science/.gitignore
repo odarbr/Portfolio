@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.egg-info/
+*.log
+*.tmp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Virtual environment
+venv/
+.venv/
+ENV/
+env/
+*.env
+
+# Data files 
+data/raw/
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.json
+*.parquet
+
+# Models
+models/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.onnx
+
+# Results
+results/
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Misc
+*.key
+*.pem
+*.crt
+*.db
