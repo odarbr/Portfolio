@@ -22,7 +22,7 @@ projects/data-science/src
 - `/run_predictive_models.py` - command line entry point
 - `/notebooks` - Jupyter notebook with exploratory analysis
 
-## 📊 Dataset
+## Dataset
 The dataset includes features like:
 - Time spent alone
 - Stage fear (Yes/No)

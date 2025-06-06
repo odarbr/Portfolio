@@ -12,7 +12,7 @@ This project is meant to demonstrate foundational data science skills:
 - Model abstraction and reuse
 - Classification and evaluation
 
-### 🔍 Features
+### Features
 - Simple data processing
 - Exploratory data analysis
 - Clean abstract model base class
