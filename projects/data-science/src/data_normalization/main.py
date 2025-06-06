@@ -15,7 +15,7 @@ def data_normalization(csv_path: str) -> pd.DataFrame:
     "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]
 
     # Read with correct seperator and encoding
-    df = pd.read_csv(csv_path, sep="\t", quotechar='"', names=columns, header=None, skiprows=1, encoding="utf-8")
+    df = pd.read_csv(csv_path, sep="\t", quotechar='"', names=columns, header=None, skiprows=1, encoding="ISO-8859-1")
 
     # Melt broad data into long format
     df_long = df.melt(
