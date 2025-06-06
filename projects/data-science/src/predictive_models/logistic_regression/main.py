@@ -1,8 +1,8 @@
 from sklearn.base import BaseEstimator
 from sklearn.linear_model import LogisticRegression
-from base_class_model import PredictiveModel
+from ..base_class_model import PredictiveModel
 
-class LogisticRegression(PredictiveModel):
+class LogisticRegressionModel(PredictiveModel):
     """ Logistic regression model for predicting personality. """
 
     def build_model(self) -> BaseEstimator:

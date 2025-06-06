@@ -1,1 +1,1 @@
-from .main import DecisionTree
+from .main import DecisionTreeModel

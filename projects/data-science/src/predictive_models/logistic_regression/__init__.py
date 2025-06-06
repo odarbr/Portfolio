@@ -1,1 +1,1 @@
-from .main import LogisticRegression
+from .main import LogisticRegressionModel
