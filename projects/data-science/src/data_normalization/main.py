@@ -37,3 +37,6 @@ def data_normalization(csv_path: str) -> pd.DataFrame:
     df["Personality"] = df["Personality"].astype("category")
 
     return df
+
+def feature_engineering(csvpath: str) -> pd.DataFrame:
+    pass
