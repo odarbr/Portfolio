@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import QuizQuestion from "../components/QuizQuestion";
+import ResultCard from "../components/ResultCard";
 
 const QuizPage = () => {
     const [questions, setQuestions] = useState([]);
@@ -13,8 +15,8 @@ const QuizPage = () => {
             .then(setQuestions);
     }, []);
 
-    const handleAnswer = (questionId, value) => {
-        setAnswers(prev => ({ ...prev, [questionId]: value}));
+    const handleAnswer = (id, value) => {
+        setAnswers(prev => ({ ...prev, [id]: value}));
     };
 
     const handleSubmit = async () => {
@@ -30,12 +32,23 @@ const QuizPage = () => {
     };
 
     if (submitted) {
-        return (
-            <div className="p-4 text-center">
-                <h2 className="text-2xl font-bold">Your Personality Type:</h2>
-                <p className="text-xl mt-2">{result}</p>
-            </div>
-        );
+        return <ResultCard result={result} />;
     }
 
- }
+    return (
+        <div className="p-4">
+            {questions.map(q => (
+                <QuizQuestion
+                    key={q.id}
+                    question={q.question}
+                    onAnswer={value => handleAnswer(q.id, value)}
+                />
+            ))}
+            {questions.length > 0 && (
+                <button onClick={handleSubmit} className="mt-4">Submit</button>
+            )}
+        </div>
+    );
+ };
+
+ export default QuizPage;
